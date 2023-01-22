@@ -1,19 +1,63 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers(a,b) {
+
+  if(a>b)
+  {
+    return a;
+  }
+
+  else if(a<b)
+  {
+    return b;
+   }
+  else if(a===b){
+        return a;
+  }
+
+}
 
 
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
+function findLongestWord(longest) {
+  if(longest.length === 0){
+      return null
+    }
+  
+  let wordL = 0;
+  let longestWord;
+  for (let i = 0; i<longest.length; i++){
+    if(longest[i].length > wordL) {
+      wordL = longest[i].length;
+      longestWord = longest[i];
+    }
+  }
+  return longestWord;
+  }
+    
+
+
+
 
 
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(arr) {
+  if(arr.length === 0){
+    return 0;
+  }
+
+  let sum = 0;
+  for(let i = 0; i<arr.length; i++){
+   return sum += arr[i]
+  }
+}
+
+
 
 
 
@@ -26,13 +70,39 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(average) {
+
+  if(average.length === 0){
+    return null;
+  }
+
+  let sum = 0;
+
+  for(let i = 0; i <average.length; i++){
+     sum += average[i];
+
+  }
+  return sum/average.length;
+}
+
+
 
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+ 
+  function averageWordLength(arr) { 
 
-function averageWordLength() { }
+    if(arr.length === 0){
+      return null;
+    }
+    let number = 0;
+    for(let i = 0; i<arr.length; i++) {
+      number += arr[i]
+    }
+    return number/arr.length;
+  }
+
 
 // Bonus - Iteration #4.1
 function avg() {}
@@ -59,7 +129,21 @@ function uniquifyArray() {}
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(arr, searchWord) {
+  if(arr.length === 0){
+    return null;
+  }
+
+  let status = false;
+  for(let i = 0; i<arr.length; i++){
+    let word = arr[i];
+    if(word === searchWord) {
+      status = true;
+	break
+}
+    } 
+    return status;
+  }
 
 
 
@@ -78,7 +162,17 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+
+  function howManyTimes(arr, searchWord) {
+    let occurance = 0;
+    for(let i = 0; i<arr.length; i++){
+      if(arr[i] === searchWord) {
+        occurance++;
+  }
+    }
+  return occurance;
+  }
+
 
 
 
